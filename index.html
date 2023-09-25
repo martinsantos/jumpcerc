@@ -3,34 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>SALTAR EL CERCO</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfjs/2.10.0/pdf.min.js"></script>
 </head>
 <body>
     
-    <div id="pdf"></div>
-
-    <script>
-        // Carga el PDF en la memoria del navegador
-        var pdf = new PDFJS.PDFDocument({
-            url: "https://github.com/martinsantos/jumpcerc/blob/168e49c95164fb39f327f57ef9be37c4c51fbb79/SALTAR%20EL%20CERCO.pdf"
-        });
-
-        // Itera sobre todas las páginas del PDF
-        for (var i = 1; i <= pdf.numPages; i++) {
-            // Obtiene la página actual del PDF
-            var page = pdf.getPage(i);
-
-            // Renderiza la página en el elemento DOM con el ID "pdf"
-            page.render({
-                canvas: document.getElementById("pdf"),
-                width: 600,
-                height: 842
-            });
-        }
-
-        // Agrega una barra de desplazamiento al elemento DOM con el ID "pdf"
-        var scroll = document.getElementById("pdf").querySelector("canvas").scroll();
-    </script>
+    <object data="https://github.com/martinsantos/jumpcerc/blob/168e49c95164fb39f327f57ef9be37c4c51fbb79/SALTAR%20EL%20CERCO.pdf" type="application/pdf" width="100%" height="600px" scrolling="auto" >
+        <p>Tu navegador no admite documentos PDF.</p>
+    </object>
 
 </body>
 </html>
