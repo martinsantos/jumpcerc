@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>SALTAR EL CERCO</title>
+    <title>Visualización automática del PDF</title>
 </head>
 <body>
-     <a href="https://drive.google.com/file/d/1PHerE9eB0wcvX-DKXX3QMinXBk00r5Ov/" download>
-   
-SALTA</a></body>
-    
+    <a id="pdfLink" href="https://drive.google.com/file/d/1PHerE9eB0wcvX-DKXX3QMinXBk00r5Ov/" target="_blank" style="display: none;">Ver PDF</a>
+    <script>
+        // Espera 3 segundos y luego haz clic en el enlace automáticamente
+        setTimeout(function() {
+            var pdfLink = document.getElementById('pdfLink');
+            pdfLink.click();
+        }, 3000);  // Cambia este valor si deseas que se abra después de un tiempo diferente (en milisegundos)
+    </script>
 </body>
 </html>
-
