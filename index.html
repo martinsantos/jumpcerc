@@ -15,15 +15,21 @@
             url: "https://github.com/martinsantos/jumpcerc/blob/168e49c95164fb39f327f57ef9be37c4c51fbb79/SALTAR%20EL%20CERCO.pdf"
         });
 
-        // Obtiene la primera página del PDF
-        var page = pdf.getPage(1);
+        // Itera sobre todas las páginas del PDF
+        for (var i = 1; i <= pdf.numPages; i++) {
+            // Obtiene la página actual del PDF
+            var page = pdf.getPage(i);
 
-        // Renderiza la página en el elemento DOM con el ID "pdf"
-        page.render({
-            canvas: document.getElementById("pdf"),
-            width: 600,
-            height: 842
-        });
+            // Renderiza la página en el elemento DOM con el ID "pdf"
+            page.render({
+                canvas: document.getElementById("pdf"),
+                width: 600,
+                height: 842
+            });
+        }
+
+        // Agrega una barra de desplazamiento al elemento DOM con el ID "pdf"
+        var scroll = document.getElementById("pdf").querySelector("canvas").scroll();
     </script>
 
 </body>
