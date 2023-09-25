@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SALTA!</title>
+    <title>Visualización automática del PDF</title>
 </head>
 <body>
-    <a id="pdfLink" href="https://drive.google.com/file/d/1PHerE9eB0wcvX-DKXX3QMinXBk00r5Ov/" target="_blank" style="display: none;">Ver PDF</a>
+    <a id="pdfLink" href="URL_DEL_PDF" target="_blank" style="display: none;">Ver PDF</a>
+
     <script>
-        // Espera 3 segundos y luego haz clic en el enlace automáticamente
-        setTimeout(function() {
+        // Haz clic en el enlace automáticamente al cargar la página
+        window.onload = function() {
             var pdfLink = document.getElementById('pdfLink');
             pdfLink.click();
-        }, 3);  // Cambia este valor si deseas que se abra después de un tiempo diferente (en milisegundos)
+        };
     </script>
 </body>
 </html>
